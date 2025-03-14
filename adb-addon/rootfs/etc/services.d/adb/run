@@ -1,0 +1,5 @@
+#!/usr/bin/with-contenv bash
+set -e
+
+echo "Starting ADB Server..."
+exec adb -a -P 5037 server nodaemon
