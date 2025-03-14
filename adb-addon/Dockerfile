@@ -3,7 +3,10 @@ FROM $BUILD_FROM
 
 RUN apk add --no-cache android-tools
 
-# Copy root filesystem
+# Kopieer root filesystem
 COPY rootfs /
+
+# BELANGRIJK: geef uitvoerrechten aan s6-run-bestanden
+RUN chmod a+x /etc/services.d/*/run
 
 EXPOSE 5037
