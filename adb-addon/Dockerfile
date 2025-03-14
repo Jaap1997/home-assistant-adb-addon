@@ -3,5 +3,4 @@ FROM $BUILD_FROM
 
 RUN apk add --no-cache android-tools
 
-# Expose poort voor ADB
 EXPOSE 5037
