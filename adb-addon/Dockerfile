@@ -1,12 +1,13 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/base:latest
+ARG BUILD_FROM=ghcr.io/home-assistant/amd64-base:latest
 FROM $BUILD_FROM
 
 RUN apk add --no-cache android-tools
 
+# Kopieer root filesystem
 COPY rootfs /
 
-RUN chmod a+x /etc/services.d/*/run \
-             /etc/services.d/*/finish
+# Maak run-bestanden uitvoerbaar
+RUN chmod a+x /etc/services.d/*/run
 
 EXPOSE 5037
 
