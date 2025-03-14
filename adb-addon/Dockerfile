@@ -3,4 +3,7 @@ FROM $BUILD_FROM
 
 RUN apk add --no-cache android-tools
 
+# Copy root filesystem
+COPY rootfs /
+
 EXPOSE 5037
