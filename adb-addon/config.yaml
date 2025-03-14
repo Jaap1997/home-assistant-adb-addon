@@ -1,5 +1,5 @@
 name: "ADB Server"
-version: "2.0.0"
+version: "3.0.0"
 slug: "adb_server"
 description: "ADB Server Add-on voor Home Assistant"
 arch:
